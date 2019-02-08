@@ -2,16 +2,46 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-
+	<body onload="closeNav(0)">
+	
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#about">About</a>
+		<a href="#services">Services</a>
+		<a href="#clients">Clients</a>
+		<a href="#contact">Contact</a>
+	</div>
+	
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">
+	<div class="topright">&#9776; Open</div>
+	
 <div class="hero-image">
-	<div class="hero-text">
-		
+<div class="hero-text">
+
+	<div id="main">
+	</div>
+
+<script>
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+</script>
+
 <h1>Sam Tursky, Web Developer</h1>
-<img src="headshot.jpeg" style="max-width:50%;max-height:50;">
-<p>This is a test, this is  test, this is a test <span style="color:green">DIFFERENT COLOR</span>.</p>
+<img src="images/headshot.jpeg" style="max-width:40%;max-height:40;">
+<p>Currently studying Web Development at <span style="color:green">
+<a href="https://www.fortmyerstech.edu/">
+Fort Myers Technical College</span></a>.</p>
+<h2>Hello, this is a test</h2>
 
 </body>
 </html>
